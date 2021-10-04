@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <title>jsObligatoriskOpg</title>
+</head>
+<body>
+    <h1>String manipulation</h1>
+    <div id="app">
+        <div style="border: 1pt; border-style: solid; padding: 20pt">
+            <input id="wordInput" v-model="word" type="text" placeholder="Word" id="wordInput" />
+            <button id="showButton" v-on:click="show(word)" id="showButton">Show it</button>
+
+            <ol>
+                <li v-for="word in words">{{word}}</li>
+            </ol>
+
+            <table class="table table-bordered table-striped">
+                <tr v-for="(word, index) in words">
+                    <td>{{index+1}}</td>
+                    <td>{{word}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
